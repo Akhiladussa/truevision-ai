@@ -1,0 +1,32 @@
+{
+  "model": "efficientnet_b0 (ImageNet pretrained), 2-class head",
+  "split_file": "split_v1.json",
+  "input_size": 224,
+  "normalize_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalize_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "label_map": {
+    "real": 0,
+    "fake": 1
+  },
+  "class_weights": [
+    2.6685824394226074,
+    0.6152827143669128
+  ],
+  "learning_rate": 0.0001,
+  "batch_size": 32,
+  "seed": 42,
+  "epochs_run": 10,
+  "best_epoch": 4,
+  "val_video_balanced_acc": 0.9464285714285714,
+  "val_video_auc": 0.9543650793650793,
+  "test_video_balanced_acc": 0.8928571428571428,
+  "test_video_auc": 0.9146825396825397
+}
