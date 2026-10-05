@@ -1,0 +1,32 @@
+{
+  "model": "LogisticRegressionCV on hand-crafted facial motion features (EAR, MAR via landmarks 13/14/61/291, motion, blink/mouth-open counts)",
+  "sampling": "80 frames spread across 5%-95% of full video",
+  "features": [
+    "ear_mean",
+    "ear_std",
+    "ear_min",
+    "ear_max",
+    "mar_mean",
+    "mar_std",
+    "mar_min",
+    "mar_max",
+    "motion_mean",
+    "motion_std",
+    "motion_max",
+    "blink_count",
+    "mouth_open_count"
+  ],
+  "split_file": "split_v1.json",
+  "chosen_C": 21.54434690031882,
+  "class_weights": {
+    "real": 2.7549019607843137,
+    "fake": 0.6108695652173913
+  },
+  "seed": 42,
+  "val_balanced_acc": 0.6726190476190477,
+  "val_auc": 0.736111111111111,
+  "test_balanced_acc": 0.6607142857142857,
+  "test_auc": 0.6111111111111112,
+  "cv_balanced_acc_mean": 0.5946153846153845,
+  "cv_balanced_acc_std": 0.07815994210062717
+}
