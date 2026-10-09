@@ -1,0 +1,62 @@
+{
+  "model": "Frozen facebook/wav2vec2-xls-r-300m; mean-pooled hidden states of one layer; StandardScaler + LogisticRegression",
+  "version": "v2 (replaces CNN v1 as the voice module if it scores better)",
+  "layer": 4,
+  "C": 0.1,
+  "layer_selection": {
+    "protocol": "train on real + A01-A04, check on real + A05-A06 (held-out attacks)",
+    "eer_per_layer": [
+      0.0068,
+      0.0031,
+      0.0009,
+      0.0016,
+      0.0007,
+      0.0049,
+      0.0106,
+      0.0125,
+      0.0197,
+      0.022,
+      0.0329,
+      0.0386,
+      0.0479,
+      0.0587,
+      0.0513,
+      0.0485,
+      0.0417,
+      0.0414,
+      0.0381,
+      0.0226,
+      0.0236,
+      0.0246,
+      0.0224,
+      0.0251,
+      0.0247
+    ]
+  },
+  "preprocessing": {
+    "sr": 16000,
+    "trim_top_db": 30,
+    "length_samples": 64000,
+    "pad": "repeat",
+    "normalize": "per-clip zero mean, unit variance"
+  },
+  "data": "same subsets as v1 (ASVspoof2019 LA; 12780 train / 7348 dev / 3998 eval-subset)",
+  "class_weight": "balanced",
+  "seed": "n/a (deterministic given features)",
+  "versions": {
+    "sklearn": "1.6.1",
+    "transformers": "5.18.0",
+    "torch": "2.11.0+cu130"
+  },
+  "dev_eer": 0.0016182626896912803,
+  "dev_auc": 0.999991169544741,
+  "test_eer": 0.06502032520325204,
+  "test_auc": 0.9836800343964976,
+  "test_balanced_acc": 0.8764864759224515,
+  "v1_cnn_test": {
+    "eer": 0.2144,
+    "auc": 0.8586,
+    "balanced_acc": 0.7896
+  },
+  "limitation": "Trained and tested on clean studio speech (ASVspoof 2019 LA); phone-call/compressed audio not evaluated."
+}
