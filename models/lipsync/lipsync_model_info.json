@@ -1,0 +1,18 @@
+{
+  "features": [
+    "c0",
+    "cmax",
+    "cabs",
+    "cmean",
+    "lag_abs"
+  ],
+  "val_auc": 0.6686507936507936,
+  "test_auc": 0.5676274944567627,
+  "test_auc_ci95": [
+    0.3585192065679871,
+    0.7500337837837836
+  ],
+  "test_bal_acc": 0.4955654101995566,
+  "n_test": 52,
+  "note": "No discriminative lip-sync signal found on DFDC (single-feature train AUC ~0.5). Fusion weight ~0."
+}
