@@ -1,0 +1,18 @@
+{
+  "weights": {
+    "2A": 1.0,
+    "2B": 0.0,
+    "2C": 0.0,
+    "2D": 0.0
+  },
+  "threshold": 0.5,
+  "note": "DFDC video: 2A only. 2B/2C/2D logged but weight 0 (no measurable added value on val/test). Val-chosen threshold 0.228 failed on test (bal acc 69.6%), so the default 0.5 is used.",
+  "val_auc_2A": 0.954,
+  "test_auc_2A": 0.915,
+  "test_auc_2A_ci95": [
+    0.79,
+    0.99
+  ],
+  "test_bal_acc_at_0_5": 0.893,
+  "n_test": 54
+}
